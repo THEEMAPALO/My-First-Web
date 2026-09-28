@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page - Ishmael Mapalo Luboya</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the World of Web Programming</h1>
+    <p class="student-info">NAME: ISHMAEL MAPALO LUBOYA | S/N: 202509735</p>
+</header>
+
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#hobbies">My Hobbies</a>
+    <a href="#learning">Learning Plan</a>
+    <a href="#photos">My Photos</a>
+    <a href="#media">My Media</a>
+    <a href="#contact">Contact</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">Learn Web Development</a>
+</nav>
+
+<main>
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <p>
+            My name is Ishmael Mapalo Luboya, and I am a second year Computer Science student
+            at Mulungushi University. I am interested in technology, programming and building
+            useful digital solutions. I am currently learning Web Technologies because I want
+            to understand how websites are designed, structured and styled. My goal is to
+            improve my HTML and CSS skills and become more confident in developing websites
+            and other software projects.
+        </p>
+    </section>
+
+    <section id="hobbies" class="content-section">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Site seeing</li>
+            <li>Reading</li>
+            <li>Watching series</li>
+        </ul>
+    </section>
+
+    <section id="learning" class="content-section">
+        <h2>My Learning Plan</h2>
+        <ol>
+            <li>Practice HTML structure and semantic elements.</li>
+            <li>Learn CSS styling, layouts and responsive design.</li>
+            <li>Build small websites and practice regularly.</li>
+        </ol>
+
+        <table>
+            <caption>Weekly Web Learning Plan</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Topic</th>
+                    <th>Practice Task</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>HTML</td>
+                    <td>Create a structured web page.</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>CSS</td>
+                    <td>Style headings, sections and links.</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Responsive Design</td>
+                    <td>Test the website on a narrow screen.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="photos" class="content-section">
+        <h2>My Photos</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/photo1.jpg" alt="Photo showing my first selected personal image">
+                <figcaption>My first selected photo.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo2.jpg" alt="Photo showing my second selected personal image">
+                <figcaption>My second selected photo.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/photo3.jpg" alt="Photo showing my third selected personal image">
+                <figcaption>My third selected photo.</figcaption>
+            </figure>
+        </div>
+        <p class="note">Replace these three image files with photos you are allowed to share.</p>
+    </section>
+
+    <section id="media" class="content-section">
+        <h2>My Media</h2>
+
+        <h3>My Introduction Video</h3>
+        <video controls>
+            <source src= type="WhatsApp Video 2026-09-27 at 6.28.15 PM.mp4""video/mp4">
+            Your browser does not support the video element.
+        </video>
+        <p>
+            In this video, I introduce myself, my Computer Science programme and one web skill
+            I hope to learn.
+        </p>
+
+        <h3>My Audio Clip</h3>
+        <audio controls>
+            <source src="videos/voice.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>
+            This recording describes one of my hobbies or my reason for studying Web Technologies.
+        </p>
+    </section>
+
+    <section id="contact" class="content-section">
+        <h2>Contact</h2>
+        <p>This form is a browser demonstration only and does not send data.</p>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ishmael Mapalo Luboya | ICT251 Web Technologies</p>
+</footer>
+
+</body>
+</html>
