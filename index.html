@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Web Page - Ishmael Mapalo Luboya</title>
+    <title>Ishmael Mapalo Luboya | ICT251 Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
-<header>
-    <h1>Welcome to the World of Web Programming</h1>
-    <p class="student-info">NAME: ISHMAEL MAPALO LUBOYA | S/N: 202509735</p>
+<header class="site-header">
+    <div class="header-top">
+        <p class="student-info">NAME: ISHMAEL MAPALO LUBOYA | S/N: 202509735</p>
+        <div class="header-controls">
+            <button type="button" id="theme-toggle" class="btn btn-small" aria-pressed="false">Dark mode</button>
+            <button type="button" id="nav-toggle" class="btn btn-small nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        </div>
+    </div>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning">Learning Plan</a>
+        <a href="#projects">Projects &amp; Skills</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener">Learn Web Development</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#hobbies">My Hobbies</a>
-    <a href="#learning">Learning Plan</a>
-    <a href="#photos">My Photos</a>
-    <a href="#media">My Media</a>
-    <a href="#contact">Contact</a>
-    <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank">Learn Web Development</a>
-</nav>
-
 <main>
+    <section id="intro" class="hero">
+        <h1>Welcome to the World of Web Programming</h1>
+        <p class="hero-programme">Ishmael Mapalo Luboya &ndash; Second-year Computer Science, Mulungushi University</p>
+        <p>
+            I am a student who enjoys turning ideas into working websites. This portfolio shows
+            what I am learning in ICT251 Web Technologies, from HTML structure to CSS layout and
+            JavaScript interaction.
+        </p>
+        <a class="btn" href="#projects">View My Projects</a>
+    </section>
+
     <section id="about" class="content-section">
         <h2>About Me</h2>
         <p>
@@ -53,59 +71,84 @@
             <li>Build small websites and practice regularly.</li>
         </ol>
 
-        <table>
-            <caption>Weekly Web Learning Plan</caption>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Topic</th>
-                    <th>Practice Task</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>HTML</td>
-                    <td>Create a structured web page.</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>CSS</td>
-                    <td>Style headings, sections and links.</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Responsive Design</td>
-                    <td>Test the website on a narrow screen.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrap">
+            <table>
+                <caption>Weekly Web Learning Plan</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Topic</th>
+                        <th scope="col">Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>HTML</td>
+                        <td>Create a structured web page.</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>CSS</td>
+                        <td>Style headings, sections and links.</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Responsive Design</td>
+                        <td>Test the website on a narrow screen.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="projects" class="content-section">
+        <h2>Projects &amp; Skills</h2>
+        <p>Three things I have learned so far in this course:</p>
+        <div class="project-grid">
+            <article class="project-card">
+                <h3>Semantic HTML5</h3>
+                <p>I structure pages with header, nav, main, section and footer so content is meaningful and accessible.</p>
+            </article>
+            <article class="project-card">
+                <h3>Responsive CSS</h3>
+                <p>I style pages with external CSS, the box model, flexible images and media queries that adapt to phones and computers.</p>
+            </article>
+            <article class="project-card">
+                <h3>Interactive JavaScript</h3>
+                <p>I validate forms, update the page through the DOM and respond to user events such as clicks and submissions.</p>
+            </article>
+        </div>
     </section>
 
     <section id="photos" class="content-section">
         <h2>My Photos</h2>
-        <div class="gallery">
-            <figure>
-                <img src="WhatsApp Image 2026-09-27 at 7.18.08 PM.jpeg" alt="Photo showing my first selected personal image">
+        <div class="gallery" id="gallery">
+            <figure class="gallery-item">
+                <img src="WhatsApp Image 2026-09-27 at 7.18.07 PM.jpeg" alt="Photo showing my first selected personal image">
                 <figcaption>My first selected photo.</figcaption>
             </figure>
-            <figure>
-                <img src="WhatsApp Image 2026-09-27 at 7.18.07 PM.jpeg" alt="Photo showing my second selected personal image">
+            <figure class="gallery-item">
+                <img src="WhatsApp Image 2026-09-27 at 7.18.08 PM.jpeg" alt="Photo showing my second selected personal image">
                 <figcaption>My second selected photo.</figcaption>
             </figure>
-            <figure>
-                <img src="WhatsApp Image 2026-09-27 at 7.18.09 PM.jpeg" alt="Photo showing my third selected personal image">
+            <figure class="gallery-item">
+                <img src="WhatsApp Image 2026-10-09 at 7.36.19 PM.jpeg" alt="Photo showing my third selected personal image">
                 <figcaption>My third selected photo.</figcaption>
             </figure>
         </div>
-        <p class="note">Replace these three image files with photos you are allowed to share.</p>
+        <div class="gallery-controls" id="gallery-controls" hidden>
+            <button type="button" id="gallery-prev" class="btn btn-small">Previous</button>
+            <span id="gallery-status" aria-live="polite">Photo 1 of 3</span>
+            <button type="button" id="gallery-next" class="btn btn-small">Next</button>
+        </div>
     </section>
 
     <section id="media" class="content-section">
         <h2>My Media</h2>
 
         <h3>My Introduction Video</h3>
-        <video controls>
+        <video controls preload="metadata">
             <source src="WhatsApp Video 2026-09-27 at 6.28.15 PM.mp4" type="video/mp4">
             Your browser does not support the video element.
         </video>
@@ -115,8 +158,8 @@
         </p>
 
         <h3>My Audio Clip</h3>
-        <audio controls>
-            <source src="WhatsApp Audio 2026-09-28 at 8.23.08 AM.aac" type="audio/mpeg">
+        <audio controls preload="metadata">
+            <source src="WhatsApp Audio 2026-09-28 at 8.23.08 AM.aac" type="audio/aac">
             Your browser does not support the audio element.
         </audio>
         <p>
@@ -126,28 +169,42 @@
 
     <section id="contact" class="content-section">
         <h2>Contact</h2>
-        <p>This form is a browser demonstration only and does not send data.</p>
+        <p class="demo-label"><strong>Browser demonstration only &mdash; no message is sent.</strong></p>
 
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <form id="contact-form" action="#" method="post" novalidate>
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-describedby="name-error">
+                <span class="error" id="name-error" role="alert"></span>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required aria-describedby="email-error">
+                <span class="error" id="email-error" role="alert"></span>
+            </div>
 
-            <label for="topic">Topic:</label>
-            <input type="text" id="topic" name="topic">
+            <div class="form-row">
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" name="topic">
+            </div>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <div class="form-row">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+                <span class="error" id="message-error" role="alert"></span>
+            </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn">Validate &amp; Preview</button>
         </form>
+
+        <div id="form-summary" class="form-summary" aria-live="polite" hidden></div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2026 Ishmael Mapalo Luboya AKA (THEE MAPALO MUSKJR)>| ICT251 Web Technologies</p>
+    <p>&copy; 2026 Ishmael Mapalo Luboya AKA (THEE MAPALO MUSKJR) | ICT251 Web Technologies</p>
+    <p><a href="https://github.com/YOUR-USERNAME/YOUR-REPOSITORY" target="_blank" rel="noopener">View Source on GitHub</a></p>
 </footer>
 
 </body>
